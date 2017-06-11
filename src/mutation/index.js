@@ -16,8 +16,7 @@ type MutationConfig = {
 };
 
 type MutationDefinition = {
-  outputType: string,
-  inputType: string,
+  mutationType: string,
   mutationField: string,
   mutationResolver: GraphQLFieldResolver<any, any>
 };
@@ -27,14 +26,11 @@ const mutationWithClientMutationId = (
 ): MutationDefinition => {
   const { name, inputFields, outputFields, mutateAndGetPayload } = config;
 
-  const inputType = `
+  const mutationType = `
     input ${name}Input {
       ${inputFields ? inputFields : ""}
       clientMutationId: String
     }
-  `;
-
-  const outputType = `
     type ${name}Payload {
       ${outputFields ? outputFields : ""}
       clientMutationId: String
@@ -52,7 +48,7 @@ const mutationWithClientMutationId = (
     });
   };
 
-  return { outputType, inputType, mutationField, mutationResolver };
+  return { mutationType, mutationField, mutationResolver };
 };
 
 export { mutationWithClientMutationId };

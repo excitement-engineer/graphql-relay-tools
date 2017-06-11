@@ -64,16 +64,11 @@ const schemaDef = `
 const schema = makeExecutableSchema({
   typeDefs: [
     schemaDef,
-    simpleMutation.inputType,
-    simpleMutation.outputType,
-    simpleMutationWithInput.inputType,
-    simpleMutationWithInput.outputType,
-    simplePromiseMutation.inputType,
-    simplePromiseMutation.outputType,
-    simpleContextMutation.inputType,
-    simpleContextMutation.outputType,
-    simpleRootValueMutation.inputType,
-    simpleRootValueMutation.outputType
+    simpleMutation.mutationType,
+    simpleMutationWithInput.mutationType,
+    simplePromiseMutation.mutationType,
+    simpleContextMutation.mutationType,
+    simpleRootValueMutation.mutationType
   ],
   resolvers: {
     Mutation: {

@@ -69,10 +69,6 @@ const flattenArgs = additionalArgs => {
   return args;
 };
 
-type ConnectionArgsConfig = {
-  additionalArgs?: ?Array<string>
-};
-
 const connectionArgs = (additionalArgs?: ?Array<string>): string => {
   let args = "";
   if (additionalArgs) {
@@ -116,7 +112,6 @@ export {
 
 // Expose some helpful utilities directly from graphql-relay.
 export {
-  // Helpers for creating connections from arrays
   connectionFromArray,
   connectionFromArraySlice,
   connectionFromPromisedArray,

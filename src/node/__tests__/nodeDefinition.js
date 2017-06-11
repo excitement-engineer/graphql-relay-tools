@@ -2,12 +2,7 @@
 
 import { makeExecutableSchema } from "graphql-tools";
 import { graphql } from "graphql";
-import {
-  nodeInterface,
-  nodeField,
-  globalIdResolver,
-  nodeDefinitions
-} from "../";
+import { nodeInterface, nodeField, nodeDefinitions } from "../";
 
 const userData = {
   "1": {

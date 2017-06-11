@@ -3,13 +3,7 @@
 import { graphql } from "graphql";
 import { makeExecutableSchema } from "graphql-tools";
 
-import {
-  nodeInterface,
-  nodeField,
-  nodesField,
-  globalIdResolver,
-  nodeDefinitions
-} from "../";
+import { nodeInterface, nodeField, nodesField, nodeDefinitions } from "../";
 
 const { nodeResolver, nodesResolver } = nodeDefinitions(id => {
   if (userData[id]) {

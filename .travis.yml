@@ -1,0 +1,9 @@
+language: node_js
+cache: yarn
+node_js:
+- '7'
+- '6'
+- '5'
+- '4'
+script:
+- if [[ "$TRAVIS_JOB_NUMBER" == *.1 ]]; then npm test; else npm run testonly; fi

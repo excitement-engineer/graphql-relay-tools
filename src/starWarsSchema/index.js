@@ -12,8 +12,7 @@ import {
   connectionDefinitions,
   connectionArgs,
   mutationWithClientMutationId,
-  fromGlobalId,
-  toGlobalId
+  fromGlobalId
 } from "../";
 
 import {
@@ -99,8 +98,7 @@ const { nodeResolver, nodesResolver } = nodeDefinitions(globalId => {
 });
 
 const {
-  outputType,
-  inputType,
+  mutationType,
   mutationField,
   mutationResolver
 } = mutationWithClientMutationId({
@@ -148,14 +146,7 @@ const schema = `
 `;
 
 export const StarWarsSchema = makeExecutableSchema({
-  typeDefs: [
-    nodeInterface,
-    schema,
-    connectionType,
-    pageInfoType,
-    inputType,
-    outputType
-  ],
+  typeDefs: [nodeInterface, schema, connectionType, pageInfoType, mutationType],
   resolvers: {
     Query: {
       rebels: getRebels,

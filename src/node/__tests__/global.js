@@ -7,7 +7,6 @@ import {
   nodeInterface,
   nodeField,
   fromGlobalId,
-  toGlobalId,
   globalIdResolver,
   nodeDefinitions
 } from "../";
@@ -67,7 +66,7 @@ const schemaDef = `
   }
 `;
 
-const { nodeResolver, nodesResolver } = nodeDefinitions(globalId => {
+const { nodeResolver } = nodeDefinitions(globalId => {
   const { type, id } = fromGlobalId(globalId);
   if (type === "User") {
     return userData[id];
