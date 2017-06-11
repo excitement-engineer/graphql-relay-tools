@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Node interface and fields introspection has correct node and nodes root fields 1`] = `
+Object {
+  "data": Object {
+    "__schema": Object {
+      "queryType": Object {
+        "fields": Array [
+          Object {
+            "args": Array [
+              Object {
+                "description": "The ID of an object",
+                "name": "id",
+                "type": Object {
+                  "kind": "NON_NULL",
+                  "ofType": Object {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                  },
+                },
+              },
+            ],
+            "description": "Fetches an object given its ID",
+            "name": "node",
+            "type": Object {
+              "kind": "INTERFACE",
+              "name": "Node",
+            },
+          },
+          Object {
+            "args": Array [
+              Object {
+                "description": "The IDs of objects",
+                "name": "ids",
+                "type": Object {
+                  "kind": "NON_NULL",
+                  "ofType": Object {
+                    "kind": "LIST",
+                    "name": null,
+                  },
+                },
+              },
+            ],
+            "description": "Fetches objects given their IDs",
+            "name": "nodes",
+            "type": Object {
+              "kind": "NON_NULL",
+              "name": null,
+            },
+          },
+        ],
+      },
+    },
+  },
+}
+`;
+
+exports[`Node interface and fields introspection has the correct node interface 1`] = `
+Object {
+  "data": Object {
+    "__type": Object {
+      "description": "An object with an ID",
+      "fields": Array [
+        Object {
+          "description": "The id of the object.",
+          "name": "id",
+          "type": Object {
+            "kind": "NON_NULL",
+            "ofType": Object {
+              "kind": "SCALAR",
+              "name": "ID",
+            },
+          },
+        },
+      ],
+      "kind": "INTERFACE",
+      "name": "Node",
+    },
+  },
+}
+`;

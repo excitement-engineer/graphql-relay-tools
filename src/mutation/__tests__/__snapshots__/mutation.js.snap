@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mutationWithClientMutationId() requires an argument 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Field "simpleMutation" argument "input" of type "SimpleMutationInput!" is required but not provided.],
+  ],
+}
+`;

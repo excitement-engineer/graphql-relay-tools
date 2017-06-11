@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`connectionDefinition() introspection has the correct argument structure 1`] = `
+Object {
+  "data": Object {
+    "__type": Object {
+      "fields": Array [
+        Object {
+          "args": Array [],
+          "name": "name",
+        },
+        Object {
+          "args": Array [
+            Object {
+              "description": "Returns the first n elements from the list.",
+              "name": "first",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Int",
+              },
+            },
+            Object {
+              "description": "Returns the elements in the list that come after the specified cursor.",
+              "name": "after",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "String",
+              },
+            },
+            Object {
+              "description": "Returns the last n elements from the list.",
+              "name": "last",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Int",
+              },
+            },
+            Object {
+              "description": "Returns the elements in the list that come before the specified cursor.",
+              "name": "before",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "String",
+              },
+            },
+            Object {
+              "description": "Sort your friends in alphabetical order",
+              "name": "sort",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Boolean",
+              },
+            },
+            Object {
+              "description": "Retrieve only nearby friends",
+              "name": "onlyNearbyFriends",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Boolean",
+              },
+            },
+          ],
+          "name": "friends",
+        },
+        Object {
+          "args": Array [
+            Object {
+              "description": "",
+              "name": "first",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Int",
+              },
+            },
+            Object {
+              "description": "",
+              "name": "after",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "String",
+              },
+            },
+            Object {
+              "description": "",
+              "name": "sort",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Boolean",
+              },
+            },
+          ],
+          "name": "friendsForward",
+        },
+        Object {
+          "args": Array [
+            Object {
+              "description": "",
+              "name": "last",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "Int",
+              },
+            },
+            Object {
+              "description": "",
+              "name": "before",
+              "type": Object {
+                "kind": "SCALAR",
+                "name": "String",
+              },
+            },
+          ],
+          "name": "friendsBackward",
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`connectionDefinition() introspection has the correct connection structure 1`] = `
+Object {
+  "data": Object {
+    "__type": Object {
+      "fields": Array [
+        Object {
+          "name": "edges",
+          "type": Object {
+            "kind": "LIST",
+            "name": null,
+            "ofType": Object {
+              "kind": "OBJECT",
+              "name": "UserEdge",
+            },
+          },
+        },
+        Object {
+          "name": "pageInfo",
+          "type": Object {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": Object {
+              "kind": "OBJECT",
+              "name": "PageInfo",
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`connectionDefinition() introspection has the correct edge structure 1`] = `
+Object {
+  "data": Object {
+    "__type": Object {
+      "fields": Array [
+        Object {
+          "name": "cursor",
+          "type": Object {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": Object {
+              "kind": "SCALAR",
+              "name": "String",
+            },
+          },
+        },
+        Object {
+          "name": "node",
+          "type": Object {
+            "kind": "OBJECT",
+            "name": "User",
+            "ofType": null,
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`connectionDefinition() introspection has the correct page info structure 1`] = `
+Object {
+  "data": Object {
+    "__type": Object {
+      "description": "Information about pagination in a connection.'",
+      "fields": Array [
+        Object {
+          "description": "When paginating forwards, the cursor to continue.",
+          "name": "endCursor",
+          "type": Object {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null,
+          },
+        },
+        Object {
+          "description": "When paginating forwards, are there more items?",
+          "name": "hasNextPage",
+          "type": Object {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": Object {
+              "kind": "SCALAR",
+              "name": "Boolean",
+            },
+          },
+        },
+        Object {
+          "description": "When paginating backwards, are there more items?",
+          "name": "hasPreviousPage",
+          "type": Object {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": Object {
+              "kind": "SCALAR",
+              "name": "Boolean",
+            },
+          },
+        },
+        Object {
+          "description": "When paginating backwards, the cursor to continue.",
+          "name": "startCursor",
+          "type": Object {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null,
+          },
+        },
+      ],
+      "kind": "OBJECT",
+      "name": "PageInfo",
+    },
+  },
+}
+`;
