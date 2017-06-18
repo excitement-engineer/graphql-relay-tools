@@ -63,7 +63,7 @@ import {
  *   rebels: Faction
  *   empire: Faction
  *   node(id: ID!): Node
- *   nodes(ids: ID!): [Node]!
+ *   nodes(ids: [ID!]!): [Node]!
  * }
  *
  * input IntroduceShipInput {
