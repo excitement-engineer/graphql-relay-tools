@@ -12,6 +12,9 @@
 import type { GraphQLResolveInfo, GraphQLFieldResolver } from "graphql";
 import { toGlobalId } from "graphql-relay";
 
+/**
+ * This is the Node interface definition.
+ */
 const nodeInterface = `
   # An object with an ID
   interface Node {
@@ -20,6 +23,10 @@ const nodeInterface = `
   }
 `;
 
+/**
+ * This is the node field that should be added
+ * to the root Query type.
+ */
 const nodeField = `
   # Fetches an object given its ID
   node(
@@ -28,6 +35,10 @@ const nodeField = `
   ): Node
 `;
 
+/**
+ * This is the nodes field that should be added
+ * to the root Query type.
+ */
 const nodesField = `
   # Fetches objects given their IDs
   nodes(
@@ -36,6 +47,12 @@ const nodesField = `
   ): [Node]! 
 `;
 
+/**
+ * Creates the resolver for an id field on a node, using `toGlobalId` to
+ * construct the ID from the provided typename. The type-specific ID is fetched
+ * by calling idFetcher on the object, or if not provided, by accessing the `id`
+ * property on the object.
+ */
 function globalIdResolver(
   typeName?: ?string,
   idFetcher?: (object: any, context: any, info: GraphQLResolveInfo) => string
@@ -52,6 +69,10 @@ type GraphQLNodeResolvers = {
   nodesResolver: GraphQLFieldResolver<any, any>
 };
 
+/**
+ * Given a function to map from an ID to an underlying object it creates
+ * the resolvers for the `node` and `nodes` root field.
+ */
 function nodeDefinitions<TContext>(
   idFetcher: (id: string, context: TContext, info: GraphQLResolveInfo) => any
 ): GraphQLNodeResolvers {

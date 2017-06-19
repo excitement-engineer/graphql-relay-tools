@@ -17,6 +17,20 @@ type mutationFn = (
   info: GraphQLResolveInfo
 ) => Promise<any> | any;
 
+/**
+ * A description of a mutation consumable by mutationWithClientMutationId
+ * to create a MutationDefinition 
+ *
+ * The inputFields and outputFields should not include `clientMutationId: String`,
+ * as this will be provided automatically.
+ *
+ * An input object will be created containing the input fields, and an
+ * object will be created containing the output fields.
+ *
+ * mutateAndGetPayload will receieve an Object with a key for each
+ * input field, and it should return an Object with a key for each
+ * output field. It may return synchronously, or return a Promise.
+ */
 type MutationConfig = {
   name: string,
   inputFields?: string,
@@ -24,6 +38,19 @@ type MutationConfig = {
   mutateAndGetPayload: mutationFn
 };
 
+/**
+ * The definition of the mutation created by mutationWithClientMutationId.
+ *
+ * The mutationType is the graphQL language type definition 
+ * of the input and payload of the mutation.
+ *
+ * The mutationField contains the arguments and the return type 
+ * of the mutation. This should be inserted next to the mutation 
+ * name in the root Mutation type.
+ *
+ * The mutationResolver is the resolver responsible for performing
+ * the actual mutation.
+ */
 type MutationDefinition = {
   mutationType: string,
   mutationField: string,

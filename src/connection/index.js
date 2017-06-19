@@ -37,6 +37,10 @@ type ConnectionDefinition = {
   connectionType: string
 };
 
+/**
+ * Returns the type for a connection with the given name,
+ * and whose nodes are of the specified type.
+ */
 const connectionDefinitions = (
   config: ConnectionConfig
 ): ConnectionDefinition => {
@@ -78,6 +82,13 @@ const flattenArgs = additionalArgs => {
   return args;
 };
 
+/*
+ * Returns the arguments appropriate to include on a field
+ * whose return type is a connection type with forward pagination.
+ *
+ * Additional fields may be passed as an argument. These 
+ * will be added to the connection argument.
+ */
 const connectionArgs = (additionalArgs?: ?Array<string>): string => {
   let args = "";
   if (additionalArgs) {
@@ -95,6 +106,13 @@ const connectionArgs = (additionalArgs?: ?Array<string>): string => {
     before: String${args})`;
 };
 
+/*
+ * Returns the arguments appropriate to include on a field
+ * whose return type is a connection type with forward pagination.
+ * 
+ * Additional fields may be passed as an argument. These 
+ * will be added to the connection argument.
+ */
 const forwardConnectionArgs = (additionalArgs?: ?Array<string>): string => {
   let args = "";
   if (additionalArgs) {
@@ -103,6 +121,13 @@ const forwardConnectionArgs = (additionalArgs?: ?Array<string>): string => {
   return `(first: Int, after: String${args})`;
 };
 
+/*
+ * Returns the arguments appropriate to include on a field
+ * whose return type is a connection type with backwards pagination.
+ * 
+ * Additional fields may be passed as an argument. These 
+ * will be added to the connection argument.
+ */
 const backwardConnectionArgs = (additionalArgs?: ?Array<string>): string => {
   let args = "";
   if (additionalArgs) {
