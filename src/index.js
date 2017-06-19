@@ -9,15 +9,6 @@
  *
  */
 
-//TODO: Add input checks and validation.
-//TODO: Check if descriptions work.
-//TODO: How to deal with deprecation messages...
-//TODO: Add credit to graphql-relay implementation.
-//TODO: Write docs
-//TODO: Add comments to the code
-//TODO: Add Graphql-relay and graphql as a peer dependency.
-//TODO: Export flow files from library.
-
 // Helper for creating node definitions
 export {
   nodeInterface,
