@@ -1,3 +1,13 @@
+// @flow
+
+/**
+ *  Copyright (c) 2015, Facebook, Inc.
+ *  All rights reserved.
+ *
+ *  This file has been adapted from the test case contained
+ *  in graphql-relay-js. All credits goes to this library.
+ */
+
 import { StarWarsSchema } from "../starWarsSchema";
 import { graphql } from "graphql";
 

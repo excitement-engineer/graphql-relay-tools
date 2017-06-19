@@ -1,10 +1,20 @@
 // @flow
 /**
+ *  Copyright (c) 2015, Facebook, Inc.
+ *  All rights reserved.
+ *  LICENSE file in the root directory of this source tree. An additional grant
+ *  of patent rights can be found in the PATENTS file in the same directory.
+ */
+
+/**
  * This defines a basic set of data for our Star Wars Schema.
  *
  * This data is hard coded for the sake of the demo, but you could imagine
  * fetching this data from a backend service rather than from hardcoded
  * JSON objects in a more complex demo.
+ *
+ * The entire contents of this file has been taken from graphq-relay-js library.
+ * All credits go to this library. See https://github.com/graphql/graphql-relay-js.
  */
 
 const xwing = {

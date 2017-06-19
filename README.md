@@ -167,4 +167,4 @@ The mutation type, field and resolver returned by `mutationWithClientMutationId`
 
 ## Credit
 
-This library is based heavily on the [GraphQL-relay.js](https://github.com/graphql/graphql-relay-js) library. The API in this library is very similar and the test cases provided by the library have been adapted for this library. Huge thanks to all the maintainers/contributors of that library for coming up with a great API.
+This library is based heavily on the [GraphQL-relay.js](https://github.com/graphql/graphql-relay-js) library. The API in this library is very similar and the test cases provided by the library have been adapted for this library, credit goes to this library. Huge thanks to all the maintainers/contributors of that library for coming up with a great API.

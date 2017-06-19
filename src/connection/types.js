@@ -1,6 +1,15 @@
 // @flow
 
 /**
+ *  Copyright (c) 2015, Facebook, Inc.
+ *  All rights reserved.
+ *
+ *  This file has been taken directly from graphql-relay-js.
+ *  All credit goes to this library and the maintainers. 
+ *  See https://github.com/graphql/graphql-relay-js.
+ */
+
+/**
  * An flow type alias for cursors in this implementation.
  */
 export type ConnectionCursor = string;
