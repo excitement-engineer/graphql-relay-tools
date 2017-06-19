@@ -8,6 +8,11 @@
     "type": "git",
     "url": "https://github.com/excitement-engineer/graphql-relay-tools.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "babel src --ignore __tests__,*.test.js --out-dir dist/ && npm run build-dot-flow",
     "build-dot-flow": "find ./src -name '*.js' -not -path '*/__tests__*' -not -name '*.test.js' | while read filepath; do cp $filepath `echo $filepath | sed 's/\\/src\\//\\/dist\\//g'`.flow; done",

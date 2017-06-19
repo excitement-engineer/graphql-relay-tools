@@ -40,7 +40,7 @@ Helper functions are provided for both building the GraphQL types for connection
 
 > Note, `connectionFromArray`, `connectionFromPromisedArray`, `cursorForObjectInConnection`, `offsetToCursor`, and `cursorToOffset` are taken directly from [GraphQL-relay.js](https://github.com/graphql/graphql-relay-js). Please refer to that library for the implementation of these helpers.
 
-An example usage of these methods from the [test schema](src/starWarsSchema/index.js):
+An example usage of these methods from the [test schema](src/__tests__/starWarsSchema.js):
 
 ```js
 const { connectionType: ShipConnection } = connectionDefinitions({
@@ -75,7 +75,7 @@ Helper functions are provided for both building the GraphQL types for nodes and 
 
 > Note, `toGlobalId` and `fromGlobalId`, are taken directly from [GraphQL-relay.js](https://github.com/graphql/graphql-relay-js). Please refer to that library for the implementation of these helpers.
 
-An example usage of these methods from the [test schema](src/starWarsSchema/index.js):
+An example usage of these methods from the [test schema](src/__tests__/starWarsSchema.js):
 
 ```js
 const { nodeResolver } = nodeDefinitions(globalId => {
@@ -118,7 +118,7 @@ A helper function is provided for building mutations with single inputs and clie
 
  - `mutationWithClientMutationId` takes a name, input fields, output fields, and a mutation method to map from the input fields to the output fields, performing the mutation along the way. It then creates and returns the mutation GraphQL type, the field configuration that can be used as a top-level field on the mutation type and the resolver function for the mutation.
 
-An example usage of these methods from the [test schema](src/starWarsSchema/index.js):
+An example usage of these methods from the [test schema](src/__tests__/starWarsSchema.js):
 
 ```js
 const {

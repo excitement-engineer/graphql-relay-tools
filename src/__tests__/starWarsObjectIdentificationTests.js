@@ -8,7 +8,7 @@
  *  in graphql-relay-js. All credits goes to this library.
  */
 
-import { StarWarsSchema } from "../starWarsSchema";
+import { StarWarsSchema } from "./starWarsSchema";
 import { graphql } from "graphql";
 
 describe("Star Wars object identification", () => {
