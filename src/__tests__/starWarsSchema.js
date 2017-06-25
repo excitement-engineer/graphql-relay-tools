@@ -10,7 +10,6 @@
  */
 
 import { makeExecutableSchema } from "graphql-tools";
-import { connectionFromArray } from "graphql-relay";
 import {
   nodeInterface,
   nodeDefinitions,
@@ -21,7 +20,8 @@ import {
   connectionDefinitions,
   connectionArgs,
   mutationWithClientMutationId,
-  fromGlobalId
+  fromGlobalId,
+  connectionFromArray
 } from "../";
 
 import {
