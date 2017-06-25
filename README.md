@@ -171,7 +171,7 @@ This library is based heavily on the [GraphQL-relay.js](https://github.com/graph
 
 
 > License from [GraphQL-relay.js](https://github.com/graphql/graphql-relay-js)
-
+>
 > For GraphQL software
 >
 > Copyright (c) 2015, Facebook, Inc. All rights reserved.
