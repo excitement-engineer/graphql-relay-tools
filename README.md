@@ -4,6 +4,8 @@
 
 This is a library that allows the easy creation of Relay compliant servers using the GraphQL type language. This library should be used in combination with [GraphQL-tools](https://github.com/apollographql/graphql-tools) which provides the structure for building an executable graphQL schema using the GraphQL type language.
 
+Curious how it works? Check out a live and editable example on [Launchpad](https://launchpad.graphql.com/1w4r8lx49).
+
 ## Getting Started
 
 A basic understanding of GraphQL and of the [GraphQL-tools](https://github.com/apollographql/graphql-tools) library is needed to provide context for this library.
