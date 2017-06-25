@@ -7,3 +7,18 @@ node_js:
 - '4'
 script:
 - if [[ "$TRAVIS_JOB_NUMBER" == *.1 ]]; then npm test; else npm run testonly; fi
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: '7'
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: dirkjanrutten@gmail.com
+        api_key:
+          secure: "DzItAlAReMgsrE+VXdX0E7BVPd6CqvYPpAn3+SlRj1m/SpSS/v7GgNSJClaRag1lJaaR3ad3QHn9BHwtQ6vxFdVxHprEjqicQaUG7/U5RrcRAi9RE81QeOBb4i2GMBepb0e0CLmJwxbZwEDabN4mh+cqJZ01qiLsHPe+Qw3vHSlXlj+AqnNqd/+XjrPQTm7l57gWtMFsD1ncrbFyu2Hd0AA8iDssdX+HyEarv7XcRjevFNd78uQvw6o6GFoVM9vRYiKyEJcSrFyh0QJXLsVcxiGCne4L5kionv1yDkE6pond24p1ml/nrwe8VaaOJhFz815VokaiabvL9QrgW0gPRRFnHhZRV3y/gqFeNANAXRrYwg0L0q8DNfy/YujhcMSm2Fp9AU5WD+ojpHQdSOwL2LIbZgfuTdkZjPa5/QmtXxTxvJTIrL4oqPJQw4O/p+WoLhzqMG/NWm7XuwdOOgK3Fkmljc9Jy6AoH0a5Kbj4MO60U4zyK82dJBtbupPmnZbRrI7w4KnLKFbFFdsWGLannvAHxq/kBWa75fctcP7vDWyApiYbB/N0v5auB9SazarmomK2C8nnD65SDIUgdWaEcwhYRAsRrUB3qotEfwWj75d5SLrwbwPEI+ZuA/vk3oj3fTeGep84JxqjVIS1jg4UvuB5AoM1ZRWXV/l+0T/JRUY="
+        on:
+          tags: true
+          branch: master
