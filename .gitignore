@@ -1,6 +1,7 @@
 ### Project ###
 
 dist/
+coverage/
 
 ### Node ###
 # Logs
