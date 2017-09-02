@@ -1,6 +1,9 @@
 # GraphQL-relay-tools
 
 [![Build Status](https://travis-ci.org/excitement-engineer/graphql-relay-tools.svg?branch=master)](https://travis-ci.org/excitement-engineer/graphql-relay-tools)
+[![npm version](https://badge.fury.io/js/graphql-relay-tools.svg)](https://badge.fury.io/js/graphql-relay-tools)
+[![codecov](https://codecov.io/gh/excitement-engineer/graphql-relay-tools/branch/master/graph/badge.svg)](https://codecov.io/gh/excitement-engineer/graphql-relay-tools)
+
 
 This is a library that allows the easy creation of Relay compliant servers using the GraphQL type language. This library should be used in combination with [GraphQL-tools](https://github.com/apollographql/graphql-tools) which provides the structure for building an executable graphQL schema using the GraphQL type language.
 
