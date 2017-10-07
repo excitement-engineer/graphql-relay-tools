@@ -1,6 +1,6 @@
 {
   "name": "graphql-relay-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A library that allows the easy creation of Relay compliant servers using the GraphQL type language.",
   "main": "dist/index.js",
   "homepage": "https://github.com/excitement-engineer/graphql-relay-tools",
