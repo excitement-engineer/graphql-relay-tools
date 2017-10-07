@@ -12,36 +12,11 @@
     "node": true,
     "jest": true
   },
+  
   "globals": {
     "fail": true
   },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "experimentalObjectRestSpread": true,
-    "forOf": true,
-    "generators": true,
-    "globalReturn": true,
-    "jsx": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "regexUFlag": true,
-    "regexYFlag": true,
-    "restParams": true,
-    "spread": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": true
-  },
-
+  
   "rules": {
     'flowtype/define-flow-type': 'error',
     'flowtype/require-valid-file-annotation': 'error',
